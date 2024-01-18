@@ -1,0 +1,104 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.movies {
+    background-image: url('./images//landing.png');
+    background-attachment: fixed;
+    height: 300px;
+}
+
+.overlay {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.824);
+}
+
+
+.buttons {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buttons a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(184, 184, 184, 0.3) 0px 8px 16px -8px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.buttons a:nth-child(1) {
+    background-color: brown;
+    color: white;
+}
+
+.video {
+    background-color: white;
+    padding: 50px;
+    display: grid;
+    color: rgb(39, 38, 38);
+    border-radius: 20px;
+    box-shadow: rgba(198, 198, 198, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.description p {
+    color: white;
+}
+
+.divider {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(49, 49, 49);
+}
+
+#router {
+    background-image: url('./images//landing.png');
+    overflow: hidden;
+}
+
+.footer {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+@media screen and (max-width:567px) {
+    
+    .movies {
+        height: fit-content;
+    }
+    
+    .overlay {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+}

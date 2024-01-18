@@ -1,0 +1,131 @@
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../../images/landing.png');
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px 40px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.747);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(9, 9, 9, 0.692);
+    border-radius: 10px;
+    z-index: 1;
+    padding: 40px 20px;
+}
+
+.container form {
+    width: 100%;
+}
+
+.container *:not(:where(input,button)) {
+    color: white;
+}
+
+.container h1 {
+    font-weight: 600;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+
+.container form input {
+    padding: 10px;
+    border: none;
+    background-color: rgb(130, 130, 130);
+    height: fit-content;
+}
+
+.container form input[type=text]{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+}
+
+.container form input[type=password]:not(.confirm){
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+}
+
+.container form .remember {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 11px;
+    align-items: center;
+}
+
+
+
+.container form input.confirm {
+    border-radius: none;
+}
+
+.container form .remember input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+.google {
+    width: 20px;
+    height: 20px;
+}
+
+.google img {
+    width: 100%;
+    height: 100%;
+}
+
+.container form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.container form button:nth-last-of-type(2) {
+    background-color: brown;
+    color: white;
+}
+
+a.signup {
+    font-size: 10px;
+    padding: 10px;
+}
+
+@media screen and (max-width:349px){
+    .login {
+        margin: 0;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .container form {
+        width: 100%;
+    }
+}

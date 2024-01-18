@@ -1,0 +1,42 @@
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-weight: 600;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+}
+
+.hub {
+    background-color: rgb(111, 8, 8);
+    padding: 5px 10px;
+    width: 4em;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navlinks a {
+    color: white;
+    text-decoration: none;
+
+}
+
+@media screen and (max-width:427px) {
+    .navlinks {
+        display: none;
+    }   
+}
