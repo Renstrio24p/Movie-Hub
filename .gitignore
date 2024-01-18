@@ -1,3 +1,5 @@
 node_modules
 dist
 netlify.toml
+# Local Netlify folder
+.netlify
