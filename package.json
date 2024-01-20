@@ -15,6 +15,8 @@
     "begin": "npm i && node esbuild.config.js"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "dompurify": "^3.0.8",
     "esbuild-plugin-inline-image": "^0.0.9"
   }
 }

@@ -1,5 +1,5 @@
 import Styles from './Footer.module.css'
-import { Drop, Lang } from './Lang'
+import { Drop, Lang, PHLang } from './Lang'
 
 /**
  * 
@@ -81,13 +81,40 @@ export default function Footer(DOM){
             </ul>
         </div>
     </div>
-    <div>
-        <div class=${Styles.lang}>
-            ${Lang}
-            <span>English UK</span>
-            ${Drop}
+    <div class=${Styles['lang-container']}>
+        <div id='drop' class=${Styles.lang}>
+            <div class=${Styles.drop}>
+                ${Lang}
+                <span id='Lang'>English UK</span>
+                ${Drop}
+            </div>
+            <div id='droplist' class=${Styles.drop_list}>
+                <li> ${Lang}English UK</li>
+                <li> ${PHLang}Tagalog PH</li>
+            </div>
         </div>
     </div>
     `)
+
+    const drop = document.getElementById('drop');
+    const list = document.getElementById('droplist');
+    const dropIcon = document.getElementById('drops')
+    const values = document.getElementById('Lang')
+
+    drop.addEventListener('click', (event) => {
+        event.stopPropagation(); 
+        list.classList.toggle(Styles.show);
+        list.style.animation = 'fadeInUp 1s 0s ease-in-out';
+        dropIcon.style.transform = 'rotate(50%)'
+    });
+
+    document.addEventListener('click', () => {
+        list.classList.remove(Styles.show);
+    });
+
+    list.addEventListener('click', (event) => {
+        event.stopPropagation(); 
+
+    });
 
 }

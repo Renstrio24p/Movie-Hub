@@ -28,6 +28,7 @@
 
 .box:not(:last-child) ul {
     margin: 10px 15px;
+    list-style: none;
 }
 
 
@@ -49,12 +50,14 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-direction: column;
     padding: 5px 10px;
     border: 1px solid white;
     width: max-content;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     margin-top: 20px;
+    position: relative;
 }
 
 .lang span {
@@ -80,4 +83,71 @@
 .subscribe input[type=button]{
     border: none;
     background-color: brown;
+}
+
+.drop {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.lang:hover {
+    background-color: rgba(77, 76, 76, 0.678);
+    cursor: pointer;;
+}
+
+.drop_list {
+    display: none;
+}
+
+.drop_list {
+    background-color: rgba(77, 76, 76, 0.678);
+    width: fit-content;
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    top: -61px;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.drop_list svg {
+    color: black;
+}
+
+.drop_list li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0 5px 5px;
+    cursor: pointer;
+}
+
+.drop_list li:not(:last-child){
+    padding-top: 5px;
+}
+
+.drop_list li{
+    padding-bottom: 5px;
+}
+
+.drop_list li:hover {
+    background-color: white;
+}
+
+.drop_list {
+    animation: fadeOutUp 1s 0s;
+  }
+  
+.drop_list.show {
+    display: block !important; 
+    animation: fadeInDown 1s 0s;
+}
+
+.drop_list {
+    animation: fadeOutUp 1s 0s;
 }
